@@ -102,12 +102,33 @@ Numpy、Pandas、Matplotlib基本操作的复习根据*《利用Python进行数�
 	
 	`setdiff1d(x,y)` `setxor1d(x,y)`
 	
+3. Numpy 用于数组的文件输入输出，线性代数，随机数
+
+  * 数组的文件输入输出
+	
+	`np.save` `np.load` `np.savez`
+	
+	`np.loadtxt` `np.savetxt` `np.genfromtxt`
+	
+  * 线性代数
+	
+	`dot` `np.dot` `np.diag` `diag` `trace` `np.trace`
+	
+	**numpy.linalg函数**
+	
+	`det` `eig` `inv` `pinv` `qr` `svd` `solve` `lstsq`
+	
+  * 随机数生成，部分numpy.random函数
+	
+	`seed` `permutation` `shuffle` `rand` `randint` `randn` `binomial`
+	
+	`normal` `beta` `chisquare` `gamma` `uniform`
 
 ## 注意事项
 
 * 设置 notebook 输出每一行，而不是只有最后一个
 
-	```
+	```Python
 	from Ipython.core.interactiveshell import InteractiveShell
 	Interactiveshell.ast_node_interactivity = 'all'
 	```
@@ -115,7 +136,7 @@ Numpy、Pandas、Matplotlib基本操作的复习根据*《利用Python进行数�
 * matplotlib 图表中输出中文（仅用于Ubuntu）
 
 	matplotlib 配置文件的修改不适用于ttc字体，而Linux下的开源字体多为ttc类型，真让人纠结，所以还是直接在 notebook 里导入字体吧。以下为Ubuntu下的Noto Sans CJK（思源）字体。
-	```
+	```Python
 	from matplotlib.font_manager import FontProperties
 	zhfont = FontProperties(
 	    fname='/usr/share/fonts/opentype/noto/NotoSansCJK-Regular.ttc')
